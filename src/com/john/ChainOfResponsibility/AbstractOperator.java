@@ -1,12 +1,8 @@
 package com.john.ChainOfResponsibility;
 
-/**
- * Created by John on 18/09/17.
- *
- */
-abstract class Operator {
+abstract class AbstractOperator {
 
-    Operator next;
+    AbstractOperator next;
 
     abstract void answerCall();
     abstract OperatorID getOperatorId();
@@ -19,3 +15,5 @@ abstract class Operator {
         }
     }
 }
+
+

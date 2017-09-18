@@ -1,16 +1,11 @@
 package com.john.ChainOfResponsibility;
 
-/**
- * Created by John on 18/09/17.
- */
 public class Service {
 
-    private Operator first;
-    private Operator last;
+    private AbstractOperator first;
+    private AbstractOperator last;
 
-
-    public void addEmployee(Operator operator) {
-
+    public void addEmployee(AbstractOperator operator) {
         if (first == null) {
             first = operator;
             last = operator;

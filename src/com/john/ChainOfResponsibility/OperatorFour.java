@@ -1,9 +1,9 @@
 package com.john.ChainOfResponsibility;
 
-public class OperatorFour extends Operator {
+public class OperatorFour extends AbstractOperator {
     @Override
     void answerCall() {
-        System.out.println("Operator Four");
+        System.out.println("AbstractOperator Four");
     }
 
     @Override

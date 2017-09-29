@@ -1,5 +1,7 @@
 package com.john;
+import com.john.BuilderPattern.JointResponse;
 import com.john.BuilderPattern.ManyParamsObject;
+import com.john.BuilderPattern.SomeService;
 import com.john.ChainOfResponsibility.*;
 import com.john.ChainOfResponsibility.Service;
 
@@ -35,6 +37,12 @@ public class Main {
         service.getOperator(OperatorID.OPT_2);
         service.getOperator(OperatorID.OPT_3);
         service.getOperator(OperatorID.OPT_4);
+
+        System.out.println(" -----Some kind of builder pattern---- ");
+
+        JointResponse someContext = new SomeService().getSomeContext();
+        System.out.println(someContext.getContextListOne());
+        System.out.println(someContext.getContextListTwo());
 
     }
 }

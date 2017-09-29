@@ -1,4 +1,4 @@
-package com.john.BuilderPattern;
+package com.john.dto;
 
 import java.util.List;
 

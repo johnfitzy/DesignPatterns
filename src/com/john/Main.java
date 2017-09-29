@@ -1,5 +1,5 @@
 package com.john;
-import com.john.BuilderPattern.JointResponse;
+import com.john.dto.JointResponse;
 import com.john.BuilderPattern.ManyParamsObject;
 import com.john.BuilderPattern.SomeService;
 import com.john.ChainOfResponsibility.*;

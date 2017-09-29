@@ -1,11 +1,12 @@
 package com.john.BuilderPattern;
 
+import com.john.dto.JointResponse;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- *
+ * Kinda based on builder pattern
  */
 public class SomeService {
     //isolate the service from any state (SomeContext), this could be use in multithreading?

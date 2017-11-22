@@ -10,20 +10,29 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("--- Builder -----");
+        doBuilderPattern();
 
-        ManyParamsObject o1= new ManyParamsObject.ManyStringBuilder()
-                .withStringOne("One")
-                .withStringTwo("Two")
-                .withStringThree("Three")
-                .build();
+        doChainOfResponsibility();
 
-        System.out.println(o1.toString());
+        doOtherBuilderPattern();
 
-        o1.getStringOne().ifPresent(System.out::println);
-        o1.getStringTwo().ifPresent(System.out::println);
-        o1.getStringThree().ifPresent(System.out::println);
+    }
 
+
+
+    
+
+
+
+    private static void doOtherBuilderPattern() {
+        System.out.println(" -----Some kind of builder pattern ---- ");
+
+        JointResponse someContext = new SomeService().getSomeContext();
+        System.out.println(someContext.getContextListOne());
+        System.out.println(someContext.getContextListTwo());
+    }
+
+    private static void doChainOfResponsibility() {
         System.out.println("--- Chain of Responsibility");
 
         Service service = new Service();
@@ -37,12 +46,21 @@ public class Main {
         service.getOperator(OperatorID.OPT_2);
         service.getOperator(OperatorID.OPT_3);
         service.getOperator(OperatorID.OPT_4);
+    }
 
-        System.out.println(" -----Some kind of builder pattern---- ");
+    private static void doBuilderPattern() {
+        System.out.println("--- Builder -----");
 
-        JointResponse someContext = new SomeService().getSomeContext();
-        System.out.println(someContext.getContextListOne());
-        System.out.println(someContext.getContextListTwo());
+        ManyParamsObject o1= new ManyParamsObject.ManyStringBuilder()
+                .withStringOne("One")
+                .withStringTwo("Two")
+                .withStringThree("Three")
+                .build();
 
+        System.out.println(o1.toString());
+
+        o1.getStringOne().ifPresent(System.out::println);
+        o1.getStringTwo().ifPresent(System.out::println);
+        o1.getStringThree().ifPresent(System.out::println);
     }
 }

@@ -1,4 +1,8 @@
 package com.john;
+import FactoryPattern.Car;
+import FactoryPattern.Vehicle;
+import FactoryPattern.VehicleFactory;
+import FactoryPattern.VehicleType;
 import com.john.dto.JointResponse;
 import com.john.BuilderPattern.ManyParamsObject;
 import com.john.BuilderPattern.SomeService;
@@ -10,17 +14,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        doBuilderPattern();
+//        doBuilderPattern();
+//
+//        doChainOfResponsibility();
+//
+//        doOtherBuilderPattern();
 
-        doChainOfResponsibility();
 
-        doOtherBuilderPattern();
-
+        doFactoryPattern();
     }
 
 
+    private static void doFactoryPattern() {
+        final Vehicle car = VehicleFactory.getVehicle(VehicleType.CAR);
+        final Vehicle motobike = VehicleFactory.getVehicle(VehicleType.MOTORBIKE);
+        final Vehicle truck = VehicleFactory.getVehicle(VehicleType.TRUCK);
 
-
+        System.out.println(car.getVehicleType());
+        System.out.println(motobike.getVehicleType());
+        System.out.println(truck.getVehicleType());
+    }
 
 
 

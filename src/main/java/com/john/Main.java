@@ -1,8 +1,8 @@
 package com.john;
-import FactoryPattern.Car;
 import FactoryPattern.Vehicle;
 import FactoryPattern.VehicleFactory;
 import FactoryPattern.VehicleType;
+import StrategyPattern.Game;
 import com.john.dto.JointResponse;
 import com.john.BuilderPattern.ManyParamsObject;
 import com.john.BuilderPattern.SomeService;
@@ -21,7 +21,14 @@ public class Main {
 //        doOtherBuilderPattern();
 
 
-        doFactoryPattern();
+//        doFactoryPattern();
+
+        doStrateyPattern();
+    }
+
+
+    private static void doStrateyPattern() {
+        new Game().startGame();
     }
 
 

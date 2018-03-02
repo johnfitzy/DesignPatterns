@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="616f4302-bcbf-4b0b-b368-e75fa48e7acc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StrategyPattern/Context.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StrategyPattern/Game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StrategyPattern/RunAway.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StrategyPattern/StayAndFight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StrategyPattern/StayPut.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/StrategyPattern/Strategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/john/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/john/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/StrategyPattern/Game.java" afterPath="$PROJECT_DIR$/src/main/java/StrategyPattern/Game.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,8 +34,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/StrategyPattern/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="255">
+              <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1216,12 +1210,20 @@
       <workItem from="1512079553260" duration="1756000" />
       <workItem from="1512095251455" duration="2426000" />
       <workItem from="1519939588322" duration="2818000" />
-      <workItem from="1519950629889" duration="2571000" />
+      <workItem from="1519950629889" duration="2707000" />
     </task>
+    <task id="LOCAL-00001" summary="Strategy pattern">
+      <created>1519953222024</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519953222024</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19503000" />
+    <option name="totallyTimeSpent" value="19639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1301,7 +1303,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Factory Pattern" />
     <MESSAGE value="blah" />
-    <option name="LAST_COMMIT_MESSAGE" value="blah" />
+    <MESSAGE value="Strategy pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Strategy pattern" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1625,8 +1628,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StrategyPattern/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="255">
+          <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

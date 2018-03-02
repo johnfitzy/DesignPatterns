@@ -13,6 +13,13 @@ import java.util.concurrent.TimeUnit;
  * In Strategy pattern, we create objects which represent various strategies and a
  * context object whose behavior varies as per its strategy object.
  * The strategy object changes the executing algorithm of the context object.
+ *
+ * The Strategy pattern is to be used where you want to choose the algorithm to use at runtime.
+ * A good use of the Strategy pattern would be saving files in different formats, running various
+ * sorting algorithms, or file compression.
+ *
+ * The Strategy pattern provides a way to define a family of algorithms, encapsulate each one as
+ * an object, and make them interchangeable.
  *  - https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm
  */
 public class Game {

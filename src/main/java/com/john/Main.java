@@ -1,4 +1,5 @@
 package com.john;
+
 import FactoryPattern.Vehicle;
 import FactoryPattern.VehicleFactory;
 import FactoryPattern.VehicleType;
@@ -8,22 +9,43 @@ import com.john.BuilderPattern.ManyParamsObject;
 import com.john.BuilderPattern.SomeService;
 import com.john.ChainOfResponsibility.*;
 import com.john.ChainOfResponsibility.Service;
+import memento.CareTaker;
+import memento.Memento;
+import memento.Originator;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        doBuilderPattern();
-//
-//        doChainOfResponsibility();
-//
-//        doOtherBuilderPattern();
+        CareTaker<Originator> careTaker = new CareTaker<>();
 
+        Originator originator = new Originator("john", 33);
 
-//        doFactoryPattern();
+        careTaker.add(originator.saveStateToMemento());
 
-        doStrateyPattern();
+        originator.setName("Sam");
+
+        careTaker.add(originator.saveStateToMemento());
+
+        careTaker.get().stream()
+                .map(Memento::getState)
+                .forEach(System.out::println);
+
+        // do something to alter state
+
+        originator.setAge(100);
+
+        final Memento<Originator> previous = careTaker.getLastSavedState();
+
+        System.out.println(previous.getState().getName() +  "  " + previous.getState().getAge());
+
+        originator.resetStateFromMemento(previous);
+
+        System.out.println("--- Previous State ----");
+
+        System.out.println(originator.toString());
+
     }
 
 
@@ -41,7 +63,6 @@ public class Main {
         System.out.println(motobike.getVehicleType());
         System.out.println(truck.getVehicleType());
     }
-
 
 
     private static void doOtherBuilderPattern() {
@@ -71,7 +92,7 @@ public class Main {
     private static void doBuilderPattern() {
         System.out.println("--- Builder -----");
 
-        ManyParamsObject o1= new ManyParamsObject.ManyStringBuilder()
+        ManyParamsObject o1 = new ManyParamsObject.ManyStringBuilder()
                 .withStringOne("One")
                 .withStringTwo("Two")
                 .withStringThree("Three")

@@ -12,11 +12,11 @@ public class CareTaker<T> {
         mementoList.add(state);
     }
 
-    public List<Memento<T>> get() {
+    public List<Memento<T>> getAll() {
         return mementoList;
     }
 
-    public Memento<T> get(int index) {
+    public Memento<T> getAll(int index) {
         return mementoList.get(index);
     }
 

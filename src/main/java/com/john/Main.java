@@ -9,42 +9,26 @@ import com.john.BuilderPattern.ManyParamsObject;
 import com.john.BuilderPattern.SomeService;
 import com.john.ChainOfResponsibility.*;
 import com.john.ChainOfResponsibility.Service;
-import memento.CareTaker;
 import memento.Memento;
-import memento.Originator;
+import nullObject.AbstractCustomer;
+import nullObject.CustomerFactory;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        CareTaker<Originator> careTaker = new CareTaker<>();
+        AbstractCustomer customer1 = CustomerFactory.getCustomer("Rob");
+        AbstractCustomer customer2 = CustomerFactory.getCustomer("Bob");
+        AbstractCustomer customer3 = CustomerFactory.getCustomer("Julie");
+        AbstractCustomer customer4 = CustomerFactory.getCustomer("Laura");
 
-        Originator originator = new Originator("john", 33);
+        System.out.println("Customers");
+        System.out.println(customer1.getName());
+        System.out.println(customer2.getName());
+        System.out.println(customer3.getName());
+        System.out.println(customer4.getName());
 
-        careTaker.add(originator.saveStateToMemento());
-
-        originator.setName("Sam");
-
-        careTaker.add(originator.saveStateToMemento());
-
-        careTaker.get().stream()
-                .map(Memento::getState)
-                .forEach(System.out::println);
-
-        // do something to alter state
-
-        originator.setAge(100);
-
-        final Memento<Originator> previous = careTaker.getLastSavedState();
-
-        System.out.println(previous.getState().getName() +  "  " + previous.getState().getAge());
-
-        originator.resetStateFromMemento(previous);
-
-        System.out.println("--- Previous State ----");
-
-        System.out.println(originator.toString());
 
     }
 
